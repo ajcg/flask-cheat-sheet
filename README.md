@@ -3,6 +3,7 @@ A cheat-sheet for creating web apps with the Flask framework using the Python la
 
 ## Contents
 - [Creating a Simple App](#creating-a-simple-app)
+- [Serving Static Files](#serving-static-files)
 - [Structuring an Application with Blueprints](#structuring-an-application-with-blueprints)
 - [Creating Object-Based Configuration](#creating-object-based-configuration)
 - [Using the Jinja2 Template Engine](#using-the-jinja2-template-engine)
@@ -25,6 +26,11 @@ def index():
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=4000, debug=True)
 ```
+
+## Serving Static Files
+- Create a "static" directory in the root of the project, then use `url_for()`
+- Example:
+```<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">```
 
 ## Structuring an Application with Blueprints
 - Example project tree for a project called `project`:
